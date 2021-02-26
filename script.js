@@ -4,7 +4,7 @@ var distance = prompt("Inserisci la distanza da percorrere (in Km)");
 var km_price = distance * 0.21;
 var ticket_price;
 var discount = 0;
-// if ( isNaN(distance) === "true" && distance > 0) {
+if ( (isNaN(distance) == false) && (distance > 0)) {
     if (age >= 0 && age < 123 ) {
         if (age >= 65 ) {
             discount = 0.4;
@@ -16,9 +16,9 @@ var discount = 0;
     } else {
         alert("Ha inserito un'età  non valida, la prego di ricaricare la pagina e riprovare")
     }
-// } else {
-//     alert("Ha inserito una distanza non valida, la prego di ricaricare la pagina e riprovare")
-// }
+} else {
+    alert("Ha inserito una distanza non valida, la prego di ricaricare la pagina e riprovare")
+}
 
 
 
