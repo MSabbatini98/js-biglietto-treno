@@ -2,35 +2,45 @@ var age = prompt("Inserisci la tua età: ");
 var distance = prompt("Inserisci la distanza da percorrere (in Km)");
 
 var km_price = distance * 0.21;
+var ticket_price;
+var discount = 0;
+// if ( isNaN(distance) === "true" && distance > 0) {
+    if (age >= 0 && age < 123 ) {
+        if (age >= 65 ) {
+            discount = 0.4;
+        } else if (age < 18) {
+            discount = 0.2 ;
+        } else {
+            discount = 0;
+        }
+    } else {
+        alert("Ha inserito un'età  non valida, la prego di ricaricare la pagina e riprovare")
+    }
+// } else {
+//     alert("Ha inserito una distanza non valida, la prego di ricaricare la pagina e riprovare")
+// }
+
+
+
+
+ticket_price = km_price - (km_price * discount);
 
 console.log(distance);
 console.log(km_price);
-
-if (age >= 65 ) {
-    var discount = 40;
-    total_price = km_price - (discount)
-} else if (age < 18) {
-    var discount = 20 ;
-} else {
-    var discount = 0;
-}
+console.log(discount);
+console.log(ticket_price);
 
 // var ticket_discount = price - ticket_discount;
 
-// document.getElementById("age").innerHTML = age;
-// document.getElementById("km").innerHTML = distance;
+document.getElementById("age").innerHTML = age;
+document.getElementById("km").innerHTML = distance;
+if (discount == 0){
+    document.getElementById("discount").innerHTML = "0%";
+} else {
+    document.getElementById("discount").innerHTML = (discount * 100) + "%";
+}
+document.getElementById("price").innerHTML = ticket_price + "€";
 
-
-// console.log(km_price);
-// console.log(discount);
-// console.log(km_price);
-// console.log(km_price);
-
-
-
-// var costo  = `La tua password sarà : ${nome}${cognome}${colore}${27}`;
-
-// document.getElementById("anno_nascita").innerHTML = password;
 
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 // va applicato uno sconto del 20% per i minorenni
