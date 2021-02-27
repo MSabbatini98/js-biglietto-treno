@@ -5,16 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .extras{
+            opacity: 0;
+        }
+        .activeable_box:active .extras{
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Calcola il costo del tuo biglietto: </h1>
-    <p>Età dichiarata: <span id="age"> </span></p>
-    <p>Km da percorrere : <span id="km"> </span></p>
-    <p>Sconti applicati: <span id="discount"> </span></p>
-    <p>Prezzo totale: <span id="price"> </span></p>
+    <div class="box">
+        <h1>Calcola il costo del tuo biglietto: </h1>
+        <h2>Dati inseriti </h2>
+        <p>Età dichiarata: <span id="age"> </span></p>
+        <p>Km da percorrere : <span id="km"> </span></p>
+        <h2>Calcolo prezzo</h2>
+        <p>Sconti applicati : <span id="discount"> </span></p>
+        <p>Prezzo totale: <span id="price"> </span></p>
+        <div class="activeable_box">
+            <button class ="btn_extras">click here to show EXTRAS</button>
+            <div class="extras">
+                <h2>Impatto ambientale</h2>
+                <p>Quantità CO2 emessa: <span id="co2"> </span> Kg </p>
+                <p>Come poter ovviare ai  <span id="co2"> </span> Kg di co2 emessa: <br>
+                    In realtà esistono molti modi, ma ve ne consigliamo alcuni tra i più semplici e pratici: <br> <span id="co2_fix"></span> </p>
+                <p>Dati ripresi dal web da vari siti, la maggior parte da <a href="https://www.treedom.net/it/plant-a-tree"> treedom</a></p>
+            </div>
+        </div>
+    </div>
+   
 
-
-    <!-- includo file java -->
+    <!-- includo file javaSCRIPT -->
     <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
