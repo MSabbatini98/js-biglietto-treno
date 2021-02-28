@@ -34,7 +34,7 @@ if (discount == 0){
 } else {
     document.getElementById("discount").innerHTML = (discount * 100) + "%";
 }
-
+//!!!!!!!!!!!! EXTRAS
 // * Calcolo co2 emesse e co2_fix
 co2 = distance * 0.065
 
@@ -69,7 +69,7 @@ if ((co2 >= 0) && (co2 < 1)) {
 }else if ((co2 >= 1500) && (co2 < 15000)) {
     co2_fix = "pianta 20 alberi con treedom !";
 }else if ((co2 >= 15000) && (co2 < 400000)) {
-    co2_fix = "uccidi circa 5 persone (13k kg all'anno a persona)";
+    co2_fix = "uccidi circa 5 persone (13.000 kg all'anno a persona)";
 }else if ((co2 >= 4000000) && (co2 < 5000000)) {
     co2_fix = "l'intero pianeta smette la produzione di tabacco e sigarette";
 } else if ((co2 >= 5000000) && (co2 < 10000000)) {
@@ -78,7 +78,7 @@ if ((co2 >= 0) && (co2 < 1)) {
     co2_fix = "Finisci la creazione della fascia verde: bosco in africa al posto del deserto del sahara";
 }
 
-
+// Funzione che approssima
 
 //! Debugging
 console.log(distance);
